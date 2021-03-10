@@ -1,9 +1,9 @@
 import React from 'react';
-import Usesb from "./tutorial/1-useState/setup/3-useState-array";
+import Setup from "./tutorial/1-useState/setup/5-useState-counter";
 function App() {
   return (
     <div className='container'>
-       <Usesb />
+       <Setup />
     </div>
   )
 }
