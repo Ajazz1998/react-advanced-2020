@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { data } from '../../../data';
 
 const UseStateArray = () => {
-  return <h2>useState array example</h2>;
+  const [people, setPeople] = useState(data);
+
+  return (
+    <>
+      {people.map((p) => {
+        const {id, name} = p;
+
+        return (
+          <div key={id} className='item'>
+            <h4>{name}</h4>
+          </div>
+        )
+
+      })}
+
+      <button type='button' className='btn' onClick={() => setPeople([])}>clear items</button>
+    </>
+  );
 };
 
 export default UseStateArray;

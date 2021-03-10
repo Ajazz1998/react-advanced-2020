@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const UseStateBasics = () => {
 
-  const [text, setText] = useState('rondom title');
+  const [text, setText] = useState('random title');
 
   const handleClick = () => {
     if (text === 'random title'){
