@@ -4,6 +4,11 @@ import { data } from '../../../data';
 const UseStateArray = () => {
   const [people, setPeople] = useState(data);
 
+  const removeItem = (id) =>{
+    const newPeople = people.filter((people) => people.id !== id);
+    setPeople(newPeople);
+  }
+
   return (
     <>
       {people.map((p) => {
@@ -12,6 +17,7 @@ const UseStateArray = () => {
         return (
           <div key={id} className='item'>
             <h4>{name}</h4>
+            <button onClick = {() => removeItem(id)}>removeitem</button>
           </div>
         )
 
