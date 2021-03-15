@@ -13,7 +13,7 @@ const UseStateCounter = () => {
       setValue((pre) => {
         return pre + 1;
       })
-    }, 2000)
+    // }, 2000)
   }
 
   return (
