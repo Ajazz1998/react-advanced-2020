@@ -15,9 +15,22 @@ const UseEffectFetchData = () => {
     getUsers();
   }, [])
 
-  return <>
+  return (
+    <>
         <h2>fetch data</h2>
-  </>;
+        <ul className="users">
+            {
+              users.map((users) => {
+                const{id, login, avitar_url, html_url} = users;
+
+                return (
+                  <li key=></li>
+                )
+              })
+            }
+        </ul>
+
+  </>);
 };
 
 export default UseEffectFetchData;
