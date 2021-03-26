@@ -21,10 +21,16 @@ const UseEffectFetchData = () => {
         <ul className="users">
             {
               users.map((users) => {
-                const{id, login, avitar_url, html_url} = users;
+                const{id, login, avatar_url, html_url} = users;
 
                 return (
-                  <li key=></li>
+                  <li key={id}>
+                    <img src={avatar_url} alt={login} />
+                    <div>
+                      <h4>{login}</h4>
+                      <a href={html_url}>Profile</a>
+                    </div>
+                  </li>
                 )
               })
             }
